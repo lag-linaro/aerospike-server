@@ -148,7 +148,7 @@ $(JEMALLOC)/configure:
 $(JEMALLOC)/Makefile: $(JEMALLOC)/configure
 	cd $(JEMALLOC) && ./configure $(JEM_CONFIG_OPT)
 
-$(LUAJIT)/src/luaconf.h: $(LUAJIT)/src/luaconf.h.orig
+$(LUAJIT)/src/luaconf.h:
 	ln -s $(notdir $<) $@
 
 .PHONY: source
